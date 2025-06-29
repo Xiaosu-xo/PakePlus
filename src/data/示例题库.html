@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例题库说明</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #1a73e8;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34a853;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        code {
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+        .note {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffca28;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        .download-btn:hover {
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <h1>示例题库说明</h1>
+    
+    <p>为了帮助您快速上手消防工程师习题练习系统，我们提供了一个示例题库文件。您可以下载这个JSON格式的题库文件，然后通过系统的「导入题库」功能将其导入到系统中。</p>
+    
+    <div class="note">
+        <p><strong>注意：</strong>实际使用时，您需要准备自己的题库文件，或从其他渠道获取符合格式要求的题库文件。系统支持JSON格式和Excel格式(.xlsx/.xls)的题库文件。</p>
+    </div>
+    
+    <h2>示例题库内容</h2>
+    
+    <p>示例题库包含10道消防工程师考试题目，包括单选题和多选题，涵盖了系统支持的所有字段。本示例使用JSON格式，但系统同样支持Excel格式的题库：</p>
+    
+    <table>
+        <tr>
+            <th>字段名</th>
+            <th>说明</th>
+            <th>是否必需</th>
+        </tr>
+        <tr>
+            <td>题干</td>
+            <td>题目的完整内容</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>选项A</td>
+            <td>A选项的内容</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>选项B</td>
+            <td>B选项的内容</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>选项C</td>
+            <td>C选项的内容</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>选项D</td>
+            <td>D选项的内容</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>选项E</td>
+            <td>E选项的内容（多选题可能会用到）</td>
+            <td>否</td>
+        </tr>
+        <tr>
+            <td>答案</td>
+            <td>正确答案，单选题为单个字母，多选题为多个字母（如ABC）</td>
+            <td>是</td>
+        </tr>
+        <tr>
+            <td>解析</td>
+            <td>题目的详细解析</td>
+            <td>否</td>
+        </tr>
+        <tr>
+            <td>类型</td>
+            <td>题目类型，可以是「单选」或「多选」</td>
+            <td>否</td>
+        </tr>
+    </table>
+    
+    <h2>如何使用示例题库</h2>
+    
+    <ol>
+        <li>下载示例题库JSON文件</li>
+        <li>打开消防工程师习题练习系统（index.html）</li>
+        <li>点击「导入题库」按钮</li>
+        <li>在弹出的文件选择对话框中选择下载的示例题库文件</li>
+        <li>系统会自动导入题库并显示第一道题目</li>
+    </ol>
+    
+    <h2>自定义题库</h2>
+    
+    <p>您可以参考示例题库的格式，创建自己的题库文件。系统支持两种格式：</p>
+    
+    <ul>
+        <li><strong>JSON格式</strong>：按照示例题库的JSON结构创建，包含必需的字段（题干、选项A-D、答案）</li>
+        <li><strong>Excel格式</strong>：创建包含相同字段的Excel表格，确保表头名称与示例中的一致</li>
+    </ul>
+    
+    <p>如果您有大量题目需要导入，建议将题目分类整理成多个题库文件，这样可以更方便地进行针对性练习。</p>
+    
+    <a href="示例题库.json" class="download-btn" download>下载示例题库(JSON格式)</a>
+    
+</body>
+</html>
