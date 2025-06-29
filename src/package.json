@@ -1,0 +1,39 @@
+{
+  "name": "fire-engineer-quiz",
+  "version": "1.0.0",
+  "description": "Fire Engineer Quiz Desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win nsis --verbose",
+    "dist": "electron-builder --publish=never"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.firefighter.quiz",
+    "productName": "Fire Engineer Quiz",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist",
+      "!.git"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  }
+}
